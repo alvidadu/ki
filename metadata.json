@@ -1,0 +1,6 @@
+{
+  "name": "Payment Koro",
+  "description": "MFS SMS Gateway application for automated bKash, Nagad, and Rocket transaction synchronization with real-time server tracking",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
