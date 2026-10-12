@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="ট্রানজ্যাকশন এডিট করুন"
+        android:textColor="@color/text_main"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="অ্যাড্রেস এবং মেসেজ পরিবর্তন করুন"
+        android:textColor="@color/text_sub"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-bold"
+        android:text="প্রেরক (Address)"
+        android:textColor="@color/text_main"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/etEditAddress"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_edittext"
+        android:inputType="text"
+        android:textColor="@color/text_main"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-bold"
+        android:text="মেসেজ বডি (Message)"
+        android:textColor="@color/text_main"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/etEditMessage"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:textColor="@color/text_main"
+        android:textSize="12sp" />
+
+</LinearLayout>

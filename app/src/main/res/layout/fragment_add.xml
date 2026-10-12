@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="ম্যানুয়াল এসএমএস এন্ট্রি"
+            android:textColor="@color/text_main"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="এসএমএস পেস্ট করুন এবং তাৎক্ষণিক সার্ভারে যুক্ত করুন"
+            android:textColor="@color/text_sub"
+            android:textSize="13sp" />
+
+        <!-- Input Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Sender / Address Input -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="প্রেরক / অ্যাড্রেস (Address)"
+                    android:textColor="@color/text_main"
+                    android:textSize="13sp" />
+
+                <!-- Quick selection chips -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/chipBkash"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="bKash"
+                            android:textColor="@color/mfs_bkash"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/chipNagad"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="6dp"
+                            android:text="NAGAD"
+                            android:textColor="@color/mfs_nagad"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/chip16167"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="6dp"
+                            android:text="16167"
+                            android:textColor="@color/mfs_nagad"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/chipRocket"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="6dp"
+                            android:text="Rocket"
+                            android:textColor="@color/mfs_rocket"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/chip16216"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="6dp"
+                            android:text="16216"
+                            android:textColor="@color/mfs_dbbl"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="যেমন: bKash / NAGAD / 16167"
+                    android:inputType="text"
+                    android:textColor="@color/text_main"
+                    android:textColorHint="@color/text_tertiary"
+                    android:textSize="14sp" />
+
+                <!-- Message Body -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="এসএমএস টেক্সট (Message)"
+                        android:textColor="@color/text_main"
+                        android:textSize="13sp" />
+
+                    <!-- Paste button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPasteMessage"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:text="পেস্ট করুন"
+                        android:textColor="@color/primary_indigo"
+                        android:textSize="12sp"
+                        app:icon="@drawable/ic_paste"
+                        app:iconSize="14dp"
+                        app:iconTint="@color/primary_indigo" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="top|start"
+                    android:hint="সম্পূর্ণ এসএমএস এখানে পেস্ট করুন..."
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/text_main"
+                    android:textColorHint="@color/text_tertiary"
+                    android:textSize="13sp" />
+
+                <!-- Auto-parsed extraction preview -->
+                <LinearLayout
+                    android:id="@+id/layoutParsedPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#F8FAFC"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvPreviewTrx"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="monospace"
+                        android:text="TrxID: --"
+                        android:textColor="@color/text_main"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvPreviewAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Amount: ৳0"
+                        android:textColor="@color/success_emerald"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <!-- Submit Button -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddSmsSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_button_gradient"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="সার্ভারে যুক্ত করুন"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <ProgressBar
+                        android:id="@+id/pbAddSms"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Recent Records Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-bold"
+                android:text="যুক্ত করা এসএমএস তালিকা"
+                android:textColor="@color/text_main"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvRecordCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 records"
+                android:textColor="@color/text_tertiary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Records RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAddedSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

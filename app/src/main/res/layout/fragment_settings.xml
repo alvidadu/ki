@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="সেটিংস ও কন্ট্রোল"
+            android:textColor="@color/text_main"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="গেটওয়ে সার্ভিস ও ইউজার অ্যাকাউন্ট কনফিগারেশন"
+            android:textColor="@color/text_sub"
+            android:textSize="13sp" />
+
+        <!-- User Profile Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="ইউজার প্রোফাইল তথ্য"
+                    android:textColor="@color/text_main"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/border_light" />
+
+                <!-- Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="কানেক্টেড ইমেইল"
+                    android:textColor="@color/text_sub"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvSettingEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="user@gmail.com"
+                    android:textColor="@color/text_main"
+                    android:textSize="14sp" />
+
+                <!-- Device Key -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="ডিভাইস কি (Device Key)"
+                    android:textColor="@color/text_sub"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvSettingDeviceKey"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:fontFamily="monospace"
+                        android:paddingStart="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="8dp"
+                        android:text="••••••••••••••••"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/btnCopyKey"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Copy Key"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_copy"
+                        app:tint="@color/primary_indigo" />
+                </LinearLayout>
+
+                <!-- Logout Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogout"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="16dp"
+                    android:text="লগআউট করুন"
+                    android:textColor="@color/danger_red"
+                    app:icon="@drawable/ic_logout"
+                    app:iconTint="@color/danger_red"
+                    app:strokeColor="@color/danger_red" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Gateway Service Toggle Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="২৪/৭ ব্যাকগ্রাউন্ড SMS গেটওয়ে"
+                        android:textColor="@color/text_main"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvServiceDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="সার্ভিস চালু থাকলে সার্বক্ষণিক SMS সিঙ্ক হবে"
+                        android:textColor="@color/text_sub"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Background Permission / Battery Optimization & Tecno/HiOS Diagnostic Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_battery"
+                        app:tint="@color/primary_indigo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Background &amp; Tecno/HiOS ডায়াগনস্টিক"
+                        android:textColor="@color/text_main"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="অ্যাপ বন্ধ বা ফোন লক থাকলেও তাৎক্ষণিক SMS পেতে নিচের স্ট্যাটাস চেক করুন:"
+                    android:textColor="@color/text_sub"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/border_light" />
+
+                <!-- 1. SMS Permission Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SMS Permission:"
+                        android:textColor="@color/text_main"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvDiagSms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Checking..."
+                        android:textColor="@color/success_emerald"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- 2. Notification Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Notification:"
+                        android:textColor="@color/text_main"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvDiagNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Checking..."
+                        android:textColor="@color/success_emerald"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- 3. Battery Optimization Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Battery Optimization:"
+                        android:textColor="@color/text_main"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvDiagBattery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Checking..."
+                        android:textColor="@color/pending_amber"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- 4. Autostart / Background Activity -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Autostart (Tecno/HiOS):"
+                        android:textColor="@color/text_main"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvDiagAutostart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Required"
+                        android:textColor="@color/primary_indigo"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Diagnostic Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <!-- Button: Fix Battery Optimization -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnIgnoreBatteryOpt"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:text="ব্যাটারি অপটিমাইজেশন বন্ধ করুন (Unrestricted)"
+                        android:textColor="@color/primary_indigo"
+                        android:textSize="12sp" />
+
+                    <!-- Button: Open Tecno Auto-Start (Phone Master) -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnTecnoAutoStart"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Tecno Auto-start (Phone Master) খুলুন"
+                        android:textColor="#92400E"
+                        android:textSize="12sp" />
+
+                    <!-- Button: Open App Info -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAppPermissions"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="6dp"
+                        android:text="অ্যান্ড্রয়েড অ্যাপ সেটিংস (Permissions)"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp" />
+
+                    <!-- Button: Notification Listener -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnNotificationAccess"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="6dp"
+                        android:text="নোটিফিকেশন অ্যাক্সেস সেটিংস"
+                        android:textColor="@color/text_main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Support and Telegram Community Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="সাপোর্ট ও সোশ্যাল কানেক্টিভিটি"
+                    android:textColor="@color/text_main"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="যেকোনো প্রয়োজনে সরাসরি ডেভেলপারের সাথে যোগাযোগ করুন"
+                    android:textColor="@color/text_sub"
+                    android:textSize="12sp" />
+
+                <!-- Dev button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSupportDev"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Developer: @Shawon_Bhai_121"
+                    android:textColor="@color/primary_indigo"
+                    app:icon="@drawable/ic_telegram"
+                    app:iconTint="@color/primary_indigo" />
+
+                <!-- Channel button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSupportChannel"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Telegram Channel"
+                    android:textColor="@color/primary_indigo"
+                    app:icon="@drawable/ic_telegram"
+                    app:iconTint="@color/primary_indigo" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

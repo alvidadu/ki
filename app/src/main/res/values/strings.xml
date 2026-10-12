@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Payment Koro</string>
+    <string name="app_tagline">MFS SMS Gateway &amp; Instant Sync</string>
+
+    <!-- Nav items -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_add_sms">Add Sms</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_developer">Developer</string>
+
+    <!-- General -->
+    <string name="login_title">লগইন করুন</string>
+    <string name="login_subtitle">আপনার ইমেইল ও ডিভাইস কি দিয়ে কানেক্ট করুন</string>
+    <string name="email_hint">ইমেইল ঠিকানা (যেমন: your@email.com)</string>
+    <string name="device_key_hint">ডিভাইস কি (Device Key)</string>
+    <string name="btn_connect">ডিভাইস কানেক্ট করুন</string>
+    <string name="connecting">কানেক্ট হচ্ছে...</string>
+
+    <!-- Dashboard -->
+    <string name="txt_total_txn">মোট ট্রানজ্যাকশন</string>
+    <string name="txt_today_txn">আজকের ট্রানজ্যাকশন</string>
+    <string name="txt_month_txn">এই মাসের ট্রানজ্যাকশন</string>
+    <string name="txt_complete_txn">সফল ট্রানজ্যাকশন</string>
+    <string name="txt_pending_txn">পেন্ডিং ট্রানজ্যাকশন</string>
+    <string name="txt_success_rate">সাকসেস রেট</string>
+
+    <!-- Notification texts -->
+    <string name="channel_name">SMS Gateway Service</string>
+    <string name="channel_desc">ব্যাকগ্রাউন্ডে ইনকামিং MFS এসএমএস রিসিভ ও সিঙ্ক করার জন্য নোটিফিকেশন</string>
+</resources>

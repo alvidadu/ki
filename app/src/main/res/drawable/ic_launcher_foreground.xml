@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Centered within 66dp safe zone (21 to 87) -->
+    <!-- Card / Terminal Base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,32 h44 c3.3,0 6,2.7 6,6 v32 c0,3.3 -2.7,6 -6,6 h-44 c-3.3,0 -6,-2.7 -6,-6 v-32 c0,-3.3 2.7,-6 6,-6 z" />
+    <!-- Magnetic / Card Header Stripe -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M26,42 h56 v6 h-56 z" />
+    <!-- Chip / Currency Symbol -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M34,54 h10 v8 h-10 z" />
+    <!-- Fast SMS / Gateway Wave / Checkmark -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M52,58 l5,5 l13,-13 l3,3 l-16,16 l-8,-8 z" />
+</vector>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- App Light & Multi-color Palette -->
+    <color name="bg_light">#F8FAFC</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="border_light">#E2E8F0</color>
+    <color name="border_active">#CBD5E1</color>
+
+    <color name="text_main">#0F172A</color>
+    <color name="text_sub">#64748B</color>
+    <color name="text_tertiary">#94A3B8</color>
+
+    <!-- Brand / Primary -->
+    <color name="primary_indigo">#4F46E5</color>
+    <color name="primary_dark">#3730A3</color>
+    <color name="primary_light_tint">#EEF2FF</color>
+    <color name="primary_glow">#204F46E5</color>
+
+    <!-- MFS Multi-color Accents -->
+    <color name="mfs_bkash">#E2136E</color>
+    <color name="mfs_bkash_bg">#FFF1F7</color>
+    <color name="mfs_nagad">#EA580C</color>
+    <color name="mfs_nagad_bg">#FFF7ED</color>
+    <color name="mfs_rocket">#7C3AED</color>
+    <color name="mfs_rocket_bg">#F5F3FF</color>
+    <color name="mfs_dbbl">#0284C7</color>
+    <color name="mfs_dbbl_bg">#F0F9FF</color>
+
+    <!-- Statuses -->
+    <color name="success_emerald">#10B981</color>
+    <color name="success_emerald_bg">#ECFDF5</color>
+    <color name="pending_amber">#F59E0B</color>
+    <color name="pending_amber_bg">#FEF3C7</color>
+    <color name="danger_red">#EF4444</color>
+    <color name="danger_red_bg">#FEF2F2</color>
+
+    <!-- Info / System stats -->
+    <color name="battery_green">#22C55E</color>
+    <color name="wifi_blue">#3B82F6</color>
+    <color name="cellular_purple">#8B5CF6</color>
+</resources>
